@@ -411,58 +411,7 @@
     </footer>
 
     <script>
-        function sendEmail() {
-            // Get form input values
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var subject = document.getElementById('subject').value;
-            var message = document.getElementById('message').value;
-
-            // Create the email body
-            var body = "Name: " + name + "\n";
-            body += "Email: " + email + "\n";
-            body += "Subject: " + subject + "\n";
-            body += "Message: " + message + "\n";
-
-            // Send the email using a server-side script or an email service provider
-            // Here you would typically make an AJAX request to your server-side script
-            // and pass the email data to it for processing and sending.
-
-            // For example, using the Fetch API:
-            fetch('/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    to: 'info@everpurehitech.com',
-                    subject: subject,
-                    body: body
-                })
-            })
-                .then(function (response) {
-                    if (response.ok) {
-                        alert('Email sent successfully!');
-                        // Optionally, clear the form fields
-                        document.getElementById('name').value = '';
-                        document.getElementById('email').value = '';
-                        document.getElementById('subject').value = '';
-                        document.getElementById('message').value = '';
-                    } else {
-                        alert('Failed to send email. Please try again later.');
-                    }
-                })
-                .catch(function (error) {
-                    alert('An error occurred. Please try again later.');
-                    console.error(error);
-                });
-        }
-
-        // Attach the function to the form's submit event
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent form submission
-            sendEmail(); // Call the sendEmail function
-        });
+        
 
         $(function () {
             let headerElem = $('header');
