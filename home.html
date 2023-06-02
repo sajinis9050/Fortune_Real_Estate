@@ -375,7 +375,15 @@
     </footer>
 
     <script>
-        
+        $(document).ready(function() {
+            $('#submit-button').click(function(e) {
+                e.preventDefault(); // Prevent the form from submitting normally
+
+                // Display the "Request submitted" message
+                alert("Request submitted");
+            });
+        });
+
 
         $(function () {
             let headerElem = $('header');
