@@ -297,7 +297,7 @@
             <div class="flex">
                 <div id="form-container">
                     <h3>Contact Form</h3>
-                    <form action="send_email.php" method="post">
+                    <form id="contact form">
                         <label for="name">Name</label>
                         <input type="text" id="name" />
 
@@ -463,7 +463,9 @@
 
             $(document).trigger('scroll');
             
-            $(document).ready(function() {
+        });
+        
+        $(document).ready(function() {
                 $('#submit-button').click(function(e) {
                 e.preventDefault(); // Prevent the form from submitting normally
 
@@ -471,7 +473,6 @@
                 alert("Request submitted");
                 });
             });
-        });
 
     </script>
 </body>
